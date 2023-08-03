@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "types": ["jest", "node"],
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "*": [
+        "node_modules/",
+        "src/types/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*", "src/index.ts"
+  ]
+}

@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  user_idx        Int    @id @default(autoincrement())
+  user_id         String @db.VarChar(20)
+  password        String @db.VarChar(100)
+  user_permission Int    @default(1)
+}
+
+model logined_users {
+  logined_users_idx Int      @id @default(autoincrement())
+  user_idx          Int
+  authorized_token  String   @db.VarChar(300)
+  refresh_token     String   @db.VarChar(150)
+  login_dt          DateTime @db.DateTime(0)
+  expire_dt         DateTime @db.DateTime(0)
+}
+
+model exercise_posts {
+  exercise_post_idx Int      @id @default(autoincrement())
+  user_idx          Int
+  exercise_tp       Int
+  title             String   @db.VarChar(50)
+  contents          String   @db.LongText
+  post_dt           DateTime @db.DateTime(0)
+  update_user_idx   Int
+  update_dt         DateTime @db.DateTime(0)
+}
+
+model exercise_comments {
+  exercise_comment_idx Int      @id @default(autoincrement())
+  exercise_post_idx    Int
+  user_idx             Int
+  comment              String   @db.LongText
+  comment_dt           DateTime @db.DateTime(0)
+}
+
+model exercise_photos {
+  exercise_photos_idx Int    @id @default(autoincrement())
+  exercise_post_idx   Int
+  photo_url           String @db.VarChar(200)
+}
