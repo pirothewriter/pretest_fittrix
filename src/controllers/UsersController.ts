@@ -9,7 +9,7 @@ import {
   Tags,
 } from 'tsoa';
 import { LoginRequest } from '../types/requests/LoginRequest';
-import AuthorizationService from '../adapters/service/AuthorizationService';
+import AuthorizationService from '../service/AuthorizationService';
 import { LoginResponse } from '../types/response/LoginResponse';
 import { SignupRequest } from '../types/requests/SignupRequest';
 import { UserResponse } from '../types/response/UserResponse';

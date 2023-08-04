@@ -1,8 +1,8 @@
-import { UsersController } from '../../controllers/UsersController';
+import { UsersController } from '../controllers/UsersController';
 import ExerciseService from './ExerciseService';
-import { ExerciseType } from '../../types/enums/ExerciseType';
-import { UNAUTORIZED } from '../../types/exceptions/AuthorizationExceptions';
-import { NOT_FILL_FIELD } from '../../types/exceptions/ExerciseExceptions';
+import { ExerciseType } from '../types/enums/ExerciseType';
+import { UNAUTORIZED } from '../types/exceptions/AuthorizationExceptions';
+import { NOT_FILL_FIELD } from '../types/exceptions/ExerciseExceptions';
 
 describe('Exercise Service Test', () => {
   let authorizedToken: string;

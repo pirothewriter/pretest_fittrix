@@ -1,4 +1,4 @@
-import { UserPermission } from '../../types/enums/UserPermission';
+import { UserPermission } from '../types/enums/UserPermission';
 import DbConnectionStore from '../intrastructure/DbConnectionStore';
 
 const UserRepository = () => {

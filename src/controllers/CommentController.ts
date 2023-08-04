@@ -11,7 +11,7 @@ import {
 } from 'tsoa';
 import express from 'express';
 import { CommentRequest } from '../types/requests/CommentRequest';
-import CommentService from '../adapters/service/CommentService';
+import CommentService from '../service/CommentService';
 import { CommentsResponse } from '../types/response/CommentsResponse';
 
 @Route('')

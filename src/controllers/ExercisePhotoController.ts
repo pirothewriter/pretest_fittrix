@@ -1,7 +1,7 @@
 import { Controller, Get, Query, Request, Route, Security, Tags } from 'tsoa';
 import express from 'express';
 import { ExercisePhotoResponse } from '../types/response/ExercisePhotoResponse';
-import ExerciseService from '../adapters/service/ExerciseService';
+import ExerciseService from '../service/ExerciseService';
 
 @Route('exercise-photos')
 @Tags('Exercise Photo')

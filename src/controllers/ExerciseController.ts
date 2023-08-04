@@ -13,7 +13,7 @@ import {
   Tags,
 } from 'tsoa';
 import { ExercisePostRequest } from '../types/requests/ExercisePostRequest';
-import ExerciseService from '../adapters/service/ExerciseService';
+import ExerciseService from '../service/ExerciseService';
 import { OrderType } from '../types/enums/OrderType';
 import { ExerciseType } from '../types/enums/ExerciseType';
 import {

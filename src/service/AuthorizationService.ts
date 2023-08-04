@@ -1,24 +1,24 @@
-import { LoginRequest } from '../../types/requests/LoginRequest';
+import { LoginRequest } from '../types/requests/LoginRequest';
 import {
   BAD_REQUEST,
   FORBIDDEN,
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
-} from '../../types/exceptions/CommonExceptions';
-import { LoginResponse } from '../../types/response/LoginResponse';
+} from '../types/exceptions/CommonExceptions';
+import { LoginResponse } from '../types/response/LoginResponse';
 import UserRepository from '../repository/UserRepository';
 import {
   ID_DUPLICATED,
   NOT_VALID_SIGNUP_FORM,
   TOKEN_EXPIRED,
   UNAUTORIZED,
-} from '../../types/exceptions/AuthorizationExceptions';
+} from '../types/exceptions/AuthorizationExceptions';
 import jwt from 'jsonwebtoken';
-import { options, secretKey } from '../../config/jwtConfig';
+import { options, secretKey } from '../config/jwtConfig';
 import LoginRepository from '../repository/LoginRepository';
-import { SignupRequest } from '../../types/requests/SignupRequest';
-import { UserResponse } from '../../types/response/UserResponse';
-import { UserPermission } from '../../types/enums/UserPermission';
+import { SignupRequest } from '../types/requests/SignupRequest';
+import { UserResponse } from '../types/response/UserResponse';
+import { UserPermission } from '../types/enums/UserPermission';
 
 const AuthorizationService = () => {
   const login = async ({

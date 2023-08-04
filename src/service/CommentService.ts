@@ -1,10 +1,10 @@
-import { UNAUTORIZED } from '../../types/exceptions/AuthorizationExceptions';
+import { UNAUTORIZED } from '../types/exceptions/AuthorizationExceptions';
 import jwt from 'jsonwebtoken';
-import { secretKey } from '../../config/jwtConfig';
+import { secretKey } from '../config/jwtConfig';
 import ExerciseCommentRepository from '../repository/ExerciseCommentRepository';
 import ExercisePostRepository from '../repository/ExercisePostRepository';
-import { NOT_FOUND } from '../../types/exceptions/CommonExceptions';
-import { CommentsResponse } from '../../types/response/CommentsResponse';
+import { NOT_FOUND } from '../types/exceptions/CommonExceptions';
+import { CommentsResponse } from '../types/response/CommentsResponse';
 
 const CommentService = () => {
   const addComment = async ({

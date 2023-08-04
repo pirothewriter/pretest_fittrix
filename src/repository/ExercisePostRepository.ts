@@ -1,7 +1,7 @@
-import { ExerciseType } from '../../types/enums/ExerciseType';
-import { OrderType } from '../../types/enums/OrderType';
+import { ExerciseType } from '../types/enums/ExerciseType';
+import { OrderType } from '../types/enums/OrderType';
 import DbConnectionStore from '../intrastructure/DbConnectionStore';
-import { UserPermission } from '../../types/enums/UserPermission';
+import { UserPermission } from '../types/enums/UserPermission';
 
 const ExercisePostRepository = () => {
   const insertExercisePost = async ({

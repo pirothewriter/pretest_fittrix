@@ -1,24 +1,24 @@
-import { ExercisePostRequest } from '../../types/requests/ExercisePostRequest';
-import { NOT_FILL_FIELD } from '../../types/exceptions/ExerciseExceptions';
+import { ExercisePostRequest } from '../types/requests/ExercisePostRequest';
+import { NOT_FILL_FIELD } from '../types/exceptions/ExerciseExceptions';
 import ExercisePostRepository from '../repository/ExercisePostRepository';
 import exercisePostRepository from '../repository/ExercisePostRepository';
 import {
   FORBIDDEN,
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
-} from '../../types/exceptions/CommonExceptions';
+} from '../types/exceptions/CommonExceptions';
 import ExercisePhotoRepository from '../repository/ExercisePhotoRepository';
-import { OrderType } from '../../types/enums/OrderType';
-import { ExercisePostResponse } from '../../types/response/ExercisePostResponse';
-import { ExerciseType } from '../../types/enums/ExerciseType';
-import { UNAUTORIZED } from '../../types/exceptions/AuthorizationExceptions';
+import { OrderType } from '../types/enums/OrderType';
+import { ExercisePostResponse } from '../types/response/ExercisePostResponse';
+import { ExerciseType } from '../types/enums/ExerciseType';
+import { UNAUTORIZED } from '../types/exceptions/AuthorizationExceptions';
 import jwt from 'jsonwebtoken';
-import { secretKey } from '../../config/jwtConfig';
-import { UserPermission } from '../../types/enums/UserPermission';
+import { secretKey } from '../config/jwtConfig';
+import { UserPermission } from '../types/enums/UserPermission';
 import {
   ExercisePhotoResponse,
   ExercisePhotos,
-} from '../../types/response/ExercisePhotoResponse';
+} from '../types/response/ExercisePhotoResponse';
 
 const ExerciseService = () => {
   const addExercisePost = async ({

@@ -1,6 +1,6 @@
 import express from 'express';
 import { UNAUTORIZED } from '../types/exceptions/AuthorizationExceptions';
-import AuthorizationService from '../adapters/service/AuthorizationService';
+import AuthorizationService from '../service/AuthorizationService';
 
 export function expressAuthentication(
   request: express.Request,
