@@ -1,5 +1,4 @@
 import {
-  Tags,
   Body,
   Controller,
   Get,
@@ -7,6 +6,7 @@ import {
   Request,
   Route,
   Security,
+  Tags,
 } from 'tsoa';
 import { LoginRequest } from '../types/requests/LoginRequest';
 import AuthorizationService from '../adapters/service/AuthorizationService';

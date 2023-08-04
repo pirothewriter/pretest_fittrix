@@ -2,16 +2,14 @@ import {
   Body,
   Controller,
   Get,
-  Post,
   Path,
+  Post,
   Request,
   Route,
   Security,
   Tags,
 } from 'tsoa';
 import express from 'express';
-import { ExercisePhotoResponse } from '../types/response/ExercisePhotoResponse';
-import ExerciseService from '../adapters/service/ExerciseService';
 import { CommentRequest } from '../types/requests/CommentRequest';
 import CommentService from '../adapters/service/CommentService';
 import { CommentsResponse } from '../types/response/CommentsResponse';

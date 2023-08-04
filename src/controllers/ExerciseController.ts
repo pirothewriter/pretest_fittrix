@@ -22,7 +22,6 @@ import {
 } from '../types/response/ExercisePostResponse';
 import express from 'express';
 import jwt from 'jsonwebtoken';
-import { ExercisePhotoResponse } from '../types/response/ExercisePhotoResponse';
 
 @Route('exercises')
 @Tags('Exercise')
